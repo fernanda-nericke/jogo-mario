@@ -9,7 +9,6 @@
 .game-board {
     width: 100%;
     height: 500px;
-    border-bottom: 15px solid rgb(35, 160, 35);
     margin: 0 auto;
     position: relative; /*para que elas respeitam a delimitação do quadro*/ 
     overflow: hidden; /*para que tudo que sair das delimitações do quadro, não apareça na tela*/
@@ -74,7 +73,6 @@
 }
 
 .avisos {
-    background-color: rgb(35, 160, 35);
     padding: 49px;
 }
 
@@ -89,3 +87,4 @@ h3 {
     text-align: center;
     text-shadow: 1px 1px 5px black;
 }
+
