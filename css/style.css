@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative; /*para que elas respeitam a delimitação do quadro*/ 
+    overflow: hidden; /*para que tudo que sair das delimitações do quadro, não apareça na tela*/
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.tubo {
+    position: absolute; /*para que nenhuma interfira no comportamento da outra*/
+    bottom: 0;
+    width: 80px;
+    animation: tubo-animation 2.5s infinite linear;
+}
+
+.mario {
+    position: absolute;
+    width: 130px;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump  1300ms ease-out;
+}
+
+.nuvens {
+    position: absolute;
+    width: 550px;
+    animation: nuvens-animation 15s infinite linear;
+}
+
+/*animação para o tubo andar para a esquerda*/
+@keyframes tubo-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes nuvens-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+.avisos {
+    background-color: rgb(35, 160, 35);
+    padding: 49px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 5px black;
+}
+
+h3 {
+    color: #87CEEB;
+    text-align: center;
+    text-shadow: 1px 1px 5px black;
+}
